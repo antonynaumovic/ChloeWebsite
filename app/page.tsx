@@ -95,7 +95,7 @@ export default function Home() {
             <Image
               className="shrink-0 grid justify-center content-center w-[270px] h-[300px]"
               alt="Chloe De Los Santos Promo"
-              src="/nextjs-github-pages/chloePromo.jpg"
+              src="/img/chloePromo.jpg"
               isBlurred
               isZoomed
             />
@@ -159,7 +159,7 @@ export default function Home() {
             <Image
               className="shrink-0 grid justify-center content-center w-[400px] h-[400px]"
               alt="Unhinged Memories Promo"
-              src="/nextjs-github-pages/unhinged.jpg"
+              src="/img/unhinged.jpg"
               isBlurred
               isZoomed
             />
