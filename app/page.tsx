@@ -98,7 +98,6 @@ export default function Home() {
               alt="Chloe De Los Santos Promo"
               src="/img/chloePromo.jpg"
               isBlurred
-              isZoomed
             />
             <div className="flex-1 justify-center content-center gap-4">
               <h2 className={`${title({ size: "sm" })} py-4`}>
@@ -136,12 +135,13 @@ export default function Home() {
         </div>
       </section>
       <section className="relative flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <section className="flex flex-row flex-wrap justify-around">
-          <h2
+      <h2
             className={`${title({ size: "md" })} py-8 font-light text-default-400 uppercase`}
           >
             Unhinged Memories
           </h2>
+        <section className="flex flex-row flex-wrap justify-around">
+
           <div className="max-w-screen-xl flex flex-row flex-wrap pt-6 gap-12 px-8 justify-around">
             <div className="flex-1 justify-center content-center gap-4">
               <h2 className={`${title({ size: "sm" })} py-4`}>
