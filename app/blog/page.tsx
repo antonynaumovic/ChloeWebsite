@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 "use client";
 import { Button } from "@nextui-org/button";
 import { ParallaxBanner } from "react-scroll-parallax";
@@ -226,9 +227,19 @@ export default function Home() {
               </div>
               <div>
                 <Image alt="Dino Game Notes" src="/img/notes.jpg" />
+                <h3 className="fullWidth font-bold text-2xl text-center">Notes and Reference from Unreal&apos;s <Link isExternal color="foreground" showAnchorIcon className="fullWidth font-bold text-2xl text-center" href="https://www.unrealengine.com/marketplace/en-US/product/meerkat-demo-06">Meerkat Demo</Link></h3>
               </div>
               <div>
                 <Image alt="Quetzal Setup" src="/img/quetzalbp.jpg" />
+              </div>
+              <div>
+                <Image alt="Pterosaur High Poly" src="/img/dinoHP.jpg" />
+              </div>
+              <div>
+                <Image alt="Pterosaur High Poly 2" src="/img/dinoHP2.jpg" />
+              </div>
+              <div>
+                <Image alt="Pterosaur Low Poly" src="/img/dinoLP.jpg" />
               </div>
             </Slider>
           </div>

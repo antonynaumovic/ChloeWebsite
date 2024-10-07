@@ -25,4 +25,5 @@ module.exports = {
   },
   darkMode: "class",
  plugins: [nextui()],
+ mode: 'jit'
 }

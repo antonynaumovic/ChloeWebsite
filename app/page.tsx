@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 "use client";
 import { Button } from "@nextui-org/button";
 import { ParallaxBanner } from "react-scroll-parallax";
@@ -134,9 +135,8 @@ export default function Home() {
           />
         </div>
       </section>
-
       <section className="relative flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <section className="max-w-screen-xl flex flex-row flex-wrap justify-around">
+        <section className="flex flex-row flex-wrap justify-around">
           <h2
             className={`${title({ size: "md" })} py-8 font-light text-default-400 uppercase`}
           >
@@ -202,8 +202,8 @@ export default function Home() {
           >
             Video
           </h3>
-          <div className="max-w-screen-xl flex flex-row flex-wrap pt-8 gap-12 px-8 justify-around">
-            <div className="flex-1">
+          <div className="flex flex-row flex-wrap-reverse pt-8 gap-12 px-8 justify-around">
+            <div className="flex-1 w-[50%] min-w-[350px]">
               <iframe
                 className="w-full aspect-video"
                 frameBorder={"none"}
@@ -212,7 +212,7 @@ export default function Home() {
                 title="Opening"
               />
             </div>
-            <div className="flex-1 justify-center content-center gap-4">
+            <div className="flex-1 justify-center content-center gap-4 min-w-[350px]">
               <h2
                 className={`text-lg pt-8 font-normal text-default-900 uppercase text-center`}
               >
@@ -227,7 +227,7 @@ export default function Home() {
           </div>
           <div className="max-w-screen-xl flex flex-row flex-wrap pt-12 gap-12 px-8 justify-around">
 
-            <div className="flex-1 justify-center content-center gap-4">
+            <div className="flex-1 justify-center content-center gap-4 min-w-[350px]">
               <h2
                 className={`text-lg pt-8 font-normal text-default-900 uppercase text-center`}
               >
@@ -237,7 +237,7 @@ export default function Home() {
               The particles were using a Niagara effect template and I changed the material settings inside the Blueprint. For the reflection of the teleporting end gate, I changed the materials and set up a trigger box effect. Also take a peak for the floating Kimono&apos;s those were set up blue prints that are triggered to float towards the player to add a little haunting effect. 
               </p>
             </div>
-            <div className="flex-1">
+            <div className="flex-1 w-[50%] min-w-[350px]">
               <iframe
                 className="w-full aspect-video"
                 frameBorder={"none"}
@@ -247,8 +247,8 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="max-w-screen-xl flex flex-row flex-wrap pt-12 gap-12 px-8 justify-around">
-            <div className="flex-1">
+          <div className="max-w-screen-xl flex flex-row flex-wrap-reverse pt-12 gap-12 px-8 justify-around">
+          <div className="flex-1 w-[50%] min-w-[350px]">
               <iframe
                 className="w-full aspect-video"
                 frameBorder={"none"}
@@ -257,7 +257,7 @@ export default function Home() {
                 title="Opening"
               />
             </div>
-            <div className="flex-1 justify-center content-center gap-4">
+            <div className="flex-1 justify-center content-center gap-4 min-w-[350px]">
               <h2
                 className={`text-lg pt-8 font-normal text-default-900 uppercase text-center`}
               >
@@ -269,7 +269,7 @@ export default function Home() {
             </div>
           </div>
           <div className="max-w-screen-xl flex flex-row flex-wrap pt-12 gap-12 px-8 justify-around">
-            <div className="flex-1 justify-center content-center gap-4">
+          <div className="flex-1 justify-center content-center gap-4 min-w-[350px]">
               <h2
                 className={`text-lg pt-8 font-normal text-default-900 uppercase text-center`}
               >
@@ -279,7 +279,7 @@ export default function Home() {
               I set up trigger effects with Niagara&apos;s template and marked them with the target points as well as setting up the blueprint for the trigger effects.
               </p>
             </div>
-            <div className="flex-1">
+            <div className="flex-1 w-[50%] min-w-[350px]">
               <iframe
                 className="w-full aspect-video"
                 frameBorder={"none"}
@@ -289,8 +289,8 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="max-w-screen-xl flex flex-row flex-wrap pt-12 gap-12 px-8 justify-around">
-            <div className="flex-1">
+          <div className="max-w-screen-xl flex flex-row flex-wrap-reverse pt-12 gap-12 px-8 justify-around">
+          <div className="flex-1 w-[50%] min-w-[350px]">
               <iframe
                 className="w-full aspect-video"
                 frameBorder={"none"}
@@ -299,7 +299,7 @@ export default function Home() {
                 title="Opening"
               />
             </div>
-            <div className="flex-1 justify-center content-center gap-4">
+            <div className="flex-1 justify-center content-center gap-4 min-w-[350px]">
               <h2
                 className={`text-lg pt-8 font-normal text-default-900 uppercase text-center`}
               >
@@ -313,7 +313,7 @@ export default function Home() {
             </div>
           </div>
           <div className="max-w-screen-xl flex flex-row flex-wrap pt-12 gap-12 px-8 justify-around">
-            <div className="flex-1 justify-center content-center gap-4">
+          <div className="flex-1 justify-center content-center gap-4 min-w-[350px]">
               <h2
                 className={`text-lg pt-8 font-normal text-default-900 uppercase text-center`}
               >
@@ -323,7 +323,7 @@ export default function Home() {
               I set up a key function event for the player to be able to hide from the &apos;monster&apos; using a door/hide function from using Unreal&apos;s blueprint. Here you can also have a glimpse sound effect of the monster looking for the main player. <i>Spooky!</i>
               </p>
             </div>
-            <div className="flex-1">
+            <div className="flex-1 w-[50%] min-w-[350px]">
               <iframe
                 className="w-full aspect-video"
                 frameBorder={"none"}
