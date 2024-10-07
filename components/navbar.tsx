@@ -22,6 +22,7 @@ import React from "react";
 
 import { siteConfig } from "@/config/site";
 import { SearchIcon, Logo, ChevronDown } from "@/components/icons";
+import { usePathname } from 'next/navigation'
 
 export const Navbar = () => {
   const searchInput = (
@@ -41,6 +42,7 @@ export const Navbar = () => {
   );
 
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const pathname = usePathname();
 
   return (
     <NextUINavbar
@@ -61,7 +63,7 @@ export const Navbar = () => {
         className="sm:flex basis-1/5 sm:basis-full gap-4"
         justify="end"
       >
-        {/* <ul className="hidden lg:flex gap-4 justify-start ml-2">
+        <ul className="hidden lg:flex gap-4 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <Button
@@ -75,7 +77,7 @@ export const Navbar = () => {
               </Button>
             </NavbarItem>
           ))}
-          <Dropdown>
+          {/* <Dropdown>
             <NavbarItem>
               <DropdownTrigger>
                 <Button
@@ -105,8 +107,8 @@ export const Navbar = () => {
                 Blog
               </DropdownItem>
             </DropdownMenu>
-          </Dropdown>
-        </ul> */}
+          </Dropdown> */}
+        </ul>
         <NavbarItem className="hidden md:flex">
           <Button
             isExternal
@@ -128,13 +130,13 @@ export const Navbar = () => {
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
                 color={
-                  index === 0
-                    ? "primary"
+                  pathname === item.href
+                    ? "secondary"
                     : index === siteConfig.navMenuItems.length - 1
                       ? "foreground" //"danger"
                       : "foreground"
                 }
-                href="#"
+                href={item.href}
                 size="lg"
               >
                 {item.label}

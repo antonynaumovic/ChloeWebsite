@@ -348,6 +348,63 @@ export const RandomSortIcon = ({
 );
 
 
+export const DinoIcon = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}: IconSvgProps) => (
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    height={size || height}
+    role="presentation"
+    viewBox="0 0 512 512"
+    width={size || width}
+    {...props}
+  >
+	<path fill="currentColor" d="M304.813 31a173.8 173.8 0 0 0-45.033 5.938c-49.2 13.2-116.718 54.886-166.967 106.406s-82.375 112.03-68.97 162.125c13.725 51.285 64.74 99.784 125.563 131.217s130.982 45.438 179.094 32.532c48.112-12.908 96.36-58.455 128.156-114.595c31.795-56.14 46.91-122.3 33.03-174.156C465.62 90.534 387.885 30.977 304.815 31zm-13.875 32.156c23.905.353 42.986 8.247 51.593 23.563c17.217 30.63-14.003 79.414-69.75 108.968c-55.745 29.553-114.908 28.66-132.124-1.97s14.035-79.415 69.78-108.968c27.875-14.777 56.596-21.947 80.5-21.594zm175.968 122.656c25.964 97.013-56.265 238.79-147.094 263.157c-55.228 14.817-136.132-7.745-196.906-49.5c136.662 62.11 320.135 11.945 344-213.658zM96.75 205.75c20.858 0 37.75 16.89 37.75 37.75s-16.89 37.78-37.75 37.78s-37.78-16.92-37.78-37.78s16.922-37.75 37.78-37.75" />
+</svg>
+);
+
+export const ArtStationIcon = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}: IconSvgProps) => (
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    height={size || height}
+    role="presentation"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+	<path fill="currentColor" d="m1.77 16.88l1.73 2.98c.34.68 1.04 1.14 1.83 1.14h11.46l-2.36-4.12zm20.46.02c0-.4-.12-.79-.33-1.12L15.17 4.1A2.04 2.04 0 0 0 13.35 3H9.8l10.38 18l1.64-2.86c.31-.54.41-.78.41-1.24m-9.5-2.96L8.1 5.92l-4.65 8.02z" /></svg>
+);
+
+
+export const ToriiIcon = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}: IconSvgProps) => (
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    height={size || height}
+    role="presentation"
+    viewBox="0 0 512 512"
+    width={size || width}
+    {...props}
+  >
+
+	<path fill="currentColor" d="M0 80c0 26.5 21.5 48 48 48h16v64h64v-64h96v64h64v-64h96v64h64v-64h16c26.5 0 48-21.5 48-48V13.4C512 6 506 0 498.6 0c-1.7 0-3.4.3-5 1l-49 19.6C425.7 28.1 405.5 32 385.2 32H126.8c-20.4 0-40.5-3.9-59.4-11.4L18.4 1c-1.6-.6-3.3-1-5-1C6 0 0 6 0 13.4zm64 208v192c0 17.7 14.3 32 32 32s32-14.3 32-32V288h256v192c0 17.7 14.3 32 32 32s32-14.3 32-32V288h32c17.7 0 32-14.3 32-32s-14.3-32-32-32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32z" /></svg>
+);
+
 export const NextUILogo: React.FC<IconSvgProps> = (props) => {
   const { width, height = 40 } = props;
 

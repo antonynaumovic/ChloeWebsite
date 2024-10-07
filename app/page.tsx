@@ -148,12 +148,12 @@ export default function Home() {
                 Video Game Project
               </h2>
               <p className="py-4 text-default-600 text-lg">
-                This project was my very first game developed using unreal
-                engine 5.2. The project is a first-person horror game settled in
-                Japan that time loops between the 1600's all the way to the
-                1950's. As a student at Vertex Bootcamp I was able to create a
+                This project was my very first game developed using Unreal
+                Engine 5.2. The project is a first-person horror game settled in
+                Japan that time loops between the 1600&apos;s all the way to the
+                1950&apos;s. As a student at Vertex Bootcamp I was able to create a
                 horror game with levels and jump scares starting with little
-                experience in unreal engine.
+                experience in Unreal Engine.
               </p>
             </div>
             <Image
@@ -234,7 +234,7 @@ export default function Home() {
                 Niagara FX
               </h2>
               <p className="py-4 text-default-600 text-lg">
-              The particles were using a Niagara effect template and I changed the material settings inside the Blueprint. For the reflection of the teleporting end gate, I changed the materials and set up a trigger box effect. Also take a peak for the floating Kimono's those were set up blue prints that are triggered to float towards the player to add a little haunting effect. 
+              The particles were using a Niagara effect template and I changed the material settings inside the Blueprint. For the reflection of the teleporting end gate, I changed the materials and set up a trigger box effect. Also take a peak for the floating Kimono&apos;s those were set up blue prints that are triggered to float towards the player to add a little haunting effect. 
               </p>
             </div>
             <div className="flex-1">
@@ -276,7 +276,7 @@ export default function Home() {
                 Target Points
               </h2>
               <p className="py-4 text-default-600 text-lg">
-              I set up trigger effects with Niagara's template and marked them with the target points as well as setting up the blueprint for the trigger effects.
+              I set up trigger effects with Niagara&apos;s template and marked them with the target points as well as setting up the blueprint for the trigger effects.
               </p>
             </div>
             <div className="flex-1">
@@ -320,7 +320,7 @@ export default function Home() {
                 Door Mechanics
               </h2>
               <p className="py-4 text-default-600 text-lg">
-              I set up a key function event for the player to be able to hide from the "monster" using a door/hide function from using Unreal's blueprint. Here you can also have a glimpse sound effect of the monster looking for the main player. <i>Spooky!</i>
+              I set up a key function event for the player to be able to hide from the &apos;monster&apos; using a door/hide function from using Unreal&apos;s blueprint. Here you can also have a glimpse sound effect of the monster looking for the main player. <i>Spooky!</i>
               </p>
             </div>
             <div className="flex-1">
