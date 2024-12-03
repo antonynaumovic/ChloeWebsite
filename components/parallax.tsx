@@ -15,7 +15,6 @@ export const staticBottom: BannerLayer = {
     <svg
       className="rotate-180 absolute bottom-0"
       fill={"hsl(var(--nextui-background))"}
-      height="auto"
       viewBox="0 0 1000 100"
       width="w-full"
     >
@@ -34,7 +33,6 @@ export const bottom1: BannerLayer = {
     <svg
       className="rotate-180 absolute bottom-0"
       fill={"hsl(var(--nextui-background))"}
-      height="auto"
       viewBox="0 0 1000 100"
       width="w-full"
     >
@@ -66,7 +64,6 @@ export const bottom2: BannerLayer = {
     <svg
       className="rotate-180 absolute bottom-0"
       fill={"hsl(var(--nextui-background))"}
-      height="auto"
       viewBox="0 0 1000 100"
       width="w-full"
     >
