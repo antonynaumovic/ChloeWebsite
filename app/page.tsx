@@ -75,7 +75,7 @@ export default function Home() {
           <h2 className={subtitle()}>Technical Artist / Game Designer</h2>
         </div>
         <div className="inline-block max-w-max text-center justify-center items-center z-10 max-w-screen-lg w-fit">
-          <AudioPlayer src="/MerryGoRound.wav" autoPlay volume={20} loop backgroundColor={"rgba(0,0,0,0)"} sliderColor="#2c2828ff" style={{ opacity:"25%", background: "rgba(0,0,0,0)", borderRadius: "15px", padding: "30px", display:"flex", width:"50rem", boxShadow:"none"}}/>
+          <AudioPlayer src="/MerryGoRound.wav" autoPlay volume={50} loop backgroundColor={"rgba(0,0,0,0)"} sliderColor="#2c2828ff" style={{ opacity:"25%", background: "rgba(0,0,0,0)", borderRadius: "15px", padding: "30px", display:"flex", width:"50rem", boxShadow:"none"}}/>
         </div>
         
         <div className="absolute background-yellow w-full h-full overflow-hidden">
