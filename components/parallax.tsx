@@ -46,6 +46,18 @@ export const bottom1: BannerLayer = {
     </svg>
   ),
 };
+
+export const lopunny: BannerLayer = {
+  shouldAlwaysCompleteAnimation: true,
+  expanded: false,
+  translateY: [0, 5],
+  children: (
+    <div className="w-full h-full flex justify-center content-end items-end pb-16">
+      <img src={"/img/Lop.gif"} className="w-[20rem] h-[20rem] opacity-50" />
+    </div>
+  ),
+};
+
 export const bottom2: BannerLayer = {
   shouldAlwaysCompleteAnimation: true,
   expanded: false,

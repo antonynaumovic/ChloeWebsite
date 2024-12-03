@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+--rm-audio-player-interface-container: rgba(0,0,0,0);
+}

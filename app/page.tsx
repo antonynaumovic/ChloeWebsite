@@ -32,6 +32,7 @@ import {
   staticTop,
   top1,
   top2,
+  lopunny
 } from "@/components/parallax";
 import { title, subtitle, button } from "@/components/primitives";
 import {
@@ -46,10 +47,21 @@ import {
 import { OpportunityCard } from "@/components/OpportunityCard";
 import { Key, useState } from "react";
 
+import { AudioPlayer } from 'react-audio-play';
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [currentKey, setCurrentKey] = useState("date_desc");
 
+  const playList = [
+    {
+      name: 'Merry Go Round',
+      writer: 'Chloe De Los Santos',
+      img: 'img/ChlodevFav.png',
+      src: 'MerryGoRound.mov',
+      id: 1,
+    },
+  ]
 
   return (
     <section>
@@ -62,12 +74,17 @@ export default function Home() {
           </h1>
           <h2 className={subtitle()}>Technical Artist / Game Designer</h2>
         </div>
+        <div className="inline-block max-w-max text-center justify-center items-center z-10 max-w-screen-lg w-fit">
+          <AudioPlayer src="/MerryGoRound.wav" autoPlay volume={20} loop backgroundColor={"rgba(0,0,0,0)"} sliderColor="#2c2828ff" style={{ opacity:"25%", background: "rgba(0,0,0,0)", borderRadius: "15px", padding: "30px", display:"flex", width:"50rem", boxShadow:"none"}}/>
+        </div>
+        
         <div className="absolute background-yellow w-full h-full overflow-hidden">
           <AnimatePresence>
             <ParallaxBanner
               className="w-full h-full"
               layers={[
                 background,
+                lopunny,
                 circle1,
                 circle2,
                 circle3,
@@ -80,6 +97,7 @@ export default function Home() {
                 staticTop,
                 top1,
                 top2,
+                
               ]}
             />
           </AnimatePresence>
