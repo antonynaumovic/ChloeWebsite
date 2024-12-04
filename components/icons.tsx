@@ -251,6 +251,25 @@ export const SortIcon = ({
   </svg>
 );
 
+export const SkipIcon = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}: IconSvgProps) => (
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M16.5 18V6h2v12zm-11 0V6l9 6z"/></svg>
+);
+
+export const SkipBackIcon = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}: IconSvgProps) => (
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M5.5 18V6h2v12zm13 0l-9-6l9-6z"/></svg>
+);
+
+
 export const DateAscSortIcon = ({
   size = 24,
   width,

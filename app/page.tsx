@@ -36,13 +36,14 @@ import {
 } from "@/components/parallax";
 import { title, subtitle, button, info } from "@/components/primitives";
 import {
-  VolunteensPromo,
   SortIcon,
   RandomSortIcon,
   DateAscSortIcon,
   NameAscSortIcon,
   DateDescSortIcon,
   NameDescSortIcon,
+  SkipIcon,
+  SkipBackIcon
 } from "@/components/icons";
 import { OpportunityCard } from "@/components/OpportunityCard";
 import { Key, useState } from "react";
@@ -52,16 +53,47 @@ import { AudioPlayer } from 'react-audio-play';
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [currentKey, setCurrentKey] = useState("date_desc");
-
-  const playList = [
+  const [currentSong, setCurrentSong] = useState(0);
+  const playlist = [
     {
       name: 'Merry Go Round',
-      writer: 'Chloe De Los Santos',
+      writer: 'Chloé De Los Santos',
       img: 'img/ChlodevFav.png',
-      src: 'MerryGoRound.mov',
+      src: '/MerryGoRound.wav',
+      id: 0,
+    },
+    {
+      name: 'Rocket',
+      writer: 'Chloé De Los Santos',
+      img: 'img/ChlodevFav.png',
+      src: '/rocket.mov',
       id: 1,
     },
+    {
+      name: 'Lowrider',
+      writer: 'Chloé De Los Santos',
+      img: 'img/ChlodevFav.png',
+      src: '/Lowrider.mov',
+      id: 2,
+    },
+    {
+      name: 'Lost In Mind',
+      writer: 'Chloé De Los Santos',
+      img: 'img/ChlodevFav.png',
+      src: '/lost_in_mind.mov',
+      id: 3,
+    },
   ]
+
+
+  const skip = () => {
+    setCurrentSong((currentSong + 1 ) % playlist.length);
+  }
+
+  const skipBack = () =>  
+  {
+    setCurrentSong(currentSong == 0 ? playlist.length-1 : (currentSong - 1 ) % playlist.length);
+  }
 
   return (
     <section>
@@ -76,8 +108,12 @@ export default function Home() {
           
         </div>
         <div className="inline-block max-w-max text-center justify-center items-center z-10 max-w-screen-lg w-fit mt-6">
-          <AudioPlayer src="/MerryGoRound.wav" autoPlay volume={50} loop backgroundColor={"rgba(0,0,0,0)"} sliderColor="#2c2828ff" style={{ opacity:"25%", background: "rgba(0,0,0,0)", borderRadius: "15px", paddingLeft: "30px", paddingRight: "30px", display:"flex", width:"50rem", boxShadow:"none"}}/>
-          <h3 className={info()}>Song - Merry Go Round - Chloé De Los Santos</h3>
+          <div className="flex max-w-max text-center justify-center items-center flex-row">
+            <Button isIconOnly onClick={skipBack} className="opacity-25"><SkipBackIcon /></Button>
+            <AudioPlayer src={playlist[currentSong].src} onEnd={skip} autoPlay volume={50} backgroundColor={"rgba(0,0,0,0)"} sliderColor="#2c2828ff" style={{ opacity:"25%", background: "rgba(0,0,0,0)", borderRadius: "15px", paddingLeft: "30px", paddingRight: "30px", display:"flex", width:"50rem", boxShadow:"none"}}/>
+            <Button isIconOnly onClick={skip} className="opacity-25"><SkipIcon /></Button>
+          </div>
+          <h3 className={info()}>Song - {playlist[currentSong].name} - {playlist[currentSong].writer}</h3>
         </div>
         
         <div className="absolute background-yellow w-full h-full overflow-hidden">
