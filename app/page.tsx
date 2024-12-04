@@ -34,7 +34,7 @@ import {
   top2,
   lopunny
 } from "@/components/parallax";
-import { title, subtitle, button } from "@/components/primitives";
+import { title, subtitle, button, info } from "@/components/primitives";
 import {
   VolunteensPromo,
   SortIcon,
@@ -68,14 +68,16 @@ export default function Home() {
       <script src="https://player.vimeo.com/api/player.js"></script>
       <section className="relative flex flex-col items-center justify-center gap-4 py-8 md:py-10 h-[calc(100vh-4rem)]">
         <div className="inline-block max-w-max text-center justify-center items-center z-10 max-w-screen-lg">
-          <h1 className={title({ size: "lg" })}>Chloe&nbsp;</h1>
-          <h1 className={`${title({ color: "violet", size: "lg" })}`}>
+          <h1 className={title({ size: "xl" })}>Chloé&nbsp;</h1>
+          <h1 className={`${title({ color: "violet", size: "xl" })}`}>
             De Los Santos
           </h1>
           <h2 className={subtitle()}>Technical Artist / Game Designer</h2>
+          
         </div>
-        <div className="inline-block max-w-max text-center justify-center items-center z-10 max-w-screen-lg w-fit">
-          <AudioPlayer src="/MerryGoRound.wav" autoPlay volume={50} loop backgroundColor={"rgba(0,0,0,0)"} sliderColor="#2c2828ff" style={{ opacity:"25%", background: "rgba(0,0,0,0)", borderRadius: "15px", padding: "30px", display:"flex", width:"50rem", boxShadow:"none"}}/>
+        <div className="inline-block max-w-max text-center justify-center items-center z-10 max-w-screen-lg w-fit mt-6">
+          <AudioPlayer src="/MerryGoRound.wav" autoPlay volume={50} loop backgroundColor={"rgba(0,0,0,0)"} sliderColor="#2c2828ff" style={{ opacity:"25%", background: "rgba(0,0,0,0)", borderRadius: "15px", paddingX: "30px", display:"flex", width:"50rem", boxShadow:"none"}}/>
+          <h3 className={info()}>Song - Merry Go Round - Chloé De Los Santos</h3>
         </div>
         
         <div className="absolute background-yellow w-full h-full overflow-hidden">
@@ -105,6 +107,7 @@ export default function Home() {
       </section>
       <section className="relative flex flex-col items-center justify-center gap-4 pt-8 md:pt-10 pb-16 px-8">
         <div className="max-w-screen-xl w-full gap-4 flex flex-wrap flex-row">
+          
           <PageCard title="Game Designer." />
           <PageCard title="Artist." />
           <PageCard title="Animator." />
