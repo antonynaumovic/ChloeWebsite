@@ -46,14 +46,13 @@ import {
   SkipBackIcon
 } from "@/components/icons";
 import { OpportunityCard } from "@/components/OpportunityCard";
-import { Key, useState } from "react";
+import { Key, useState, useEffect } from "react";
 
 import { AudioPlayer } from 'react-audio-play';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [currentKey, setCurrentKey] = useState("date_desc");
-  const [currentSong, setCurrentSong] = useState(0);
   const playlist = [
     {
       name: 'Merry Go Round',
@@ -83,7 +82,31 @@ export default function Home() {
       src: '/lost_in_mind.mov',
       id: 3,
     },
+    {
+      name: 'Speedracer',
+      writer: 'Chloé De Los Santos',
+      img: 'img/ChlodevFav.png',
+      src: '/speedracer_50.mov',
+      id: 4,
+    },
+    {
+      name: 'Bunny',
+      writer: 'Chloé De Los Santos',
+      img: 'img/ChlodevFav.png',
+      src: '/bunny_77.mov',
+      id: 5,
+    },
+    {
+      name: 'Loadscreen',
+      writer: 'Chloé De Los Santos',
+      img: 'img/ChlodevFav.png',
+      src: '/loadscreen_58.mov',
+      id: 6,
+    },
   ]
+  const [currentSong, setCurrentSong] = useState(0);
+
+
 
 
   const skip = () => {
@@ -94,6 +117,11 @@ export default function Home() {
   {
     setCurrentSong(currentSong == 0 ? playlist.length-1 : (currentSong - 1 ) % playlist.length);
   }
+
+  useEffect(() => {
+    setCurrentSong(Math.floor(Math.random() * playlist.length));
+  }, [])
+ 
 
   return (
     <section>
@@ -108,12 +136,12 @@ export default function Home() {
           
         </div>
         <div className="inline-block max-w-max text-center justify-center items-center z-10 max-w-screen-lg w-fit mt-6">
-          <div className="flex max-w-max text-center justify-center items-center flex-row">
+          <div className="flex max-w-max text-center justify-center items-center flex-row" >
             <Button isIconOnly onClick={skipBack} className="opacity-25"><SkipBackIcon /></Button>
             <AudioPlayer src={playlist[currentSong].src} onEnd={skip} autoPlay volume={50} backgroundColor={"rgba(0,0,0,0)"} sliderColor="#2c2828ff" style={{ opacity:"25%", background: "rgba(0,0,0,0)", borderRadius: "15px", paddingLeft: "30px", paddingRight: "30px", display:"flex", width:"50rem", boxShadow:"none"}}/>
             <Button isIconOnly onClick={skip} className="opacity-25"><SkipIcon /></Button>
           </div>
-          <h3 className={info()}>Song - {playlist[currentSong].name} - {playlist[currentSong].writer}</h3>
+          <h3 className={info()} suppressHydrationWarning={true}>Song - {playlist[currentSong].name} - {playlist[currentSong].writer}</h3>
         </div>
         
         <div className="absolute background-yellow w-full h-full overflow-hidden">
