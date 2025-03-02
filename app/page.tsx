@@ -103,6 +103,20 @@ export default function Home() {
       src: '/loadscreen_58.mov',
       id: 6,
     },
+    {
+      name: 'Fly With Me',
+      writer: 'Chloé De Los Santos',
+      img: 'img/ChlodevFav.png',
+      src: '/fly_with_me_1.wav',
+      id: 7,
+    },
+    {
+      name: 'First Version',
+      writer: 'Chloé De Los Santos',
+      img: 'img/ChlodevFav.png',
+      src: '/first version_29.wav',
+      id: 8,
+    },
   ]
   const [currentSong, setCurrentSong] = useState(0);
 
