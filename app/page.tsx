@@ -107,7 +107,7 @@ export default function Home() {
       name: 'Fly With Me',
       writer: 'Chloé De Los Santos',
       img: 'img/ChlodevFav.png',
-      src: '/fly_with_me_1.wav',
+      src: '/fly_with_me_1.mp3',
       id: 7,
     },
     {
